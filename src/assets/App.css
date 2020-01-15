@@ -1,0 +1,87 @@
+
+
+.App {
+  display: flex;
+flex-direction: column;
+height: 100%;
+  text-align: center;
+  max-width: 1000px;
+margin: 0 auto;
+padding: 1em;
+}
+
+.App-logo {
+  height: 2em;
+}
+
+.App-header {
+ display: flex;
+
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+}
+
+.App main {
+  flex: 1;
+  display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 2em 0em;
+}
+
+.App main > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.App main div > * {
+  flex: 1;
+}
+
+.App main div >:first-child {
+  flex: 0 0;
+}
+
+.App main h2 {
+  font-size: 3em;
+  padding: 0em 0.5em;
+  margin: 0;
+}
+
+.App main .title {
+  padding: 1em;
+}
+
+.App main .list {
+  padding: 1em;
+}
+
+.App main textarea {
+  border-radius: 10px;
+  border: 0px none;
+  width: 100%;
+  min-height: 150px;
+  box-sizing: border-box;
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+
+#appStyler {
+  margin: 2em 0;
+
+border-top: 1px solid;
+
+border-bottom: 1px solid;
+
+padding: 3em 0;
+}
+
+@media (max-width: 600px) {
+  .App main > * {
+    flex-direction: column;
+  }
+}

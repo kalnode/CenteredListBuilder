@@ -1,29 +1,15 @@
 import React from 'react';
 import './assets/App.css';
 import Header from './components/Header';
+import ListInput from './components/ListInput';
 import ListStyler from './components/ListStyler';
 import ListOutput from './components/ListOutput';
 import Footer from './components/Footer';
+import { connect } from 'react-redux';
 
-// Making use of Redux's React Hooks
-import { useDispatch, useSelector } from "react-redux";
-
-
-// App is structred as a functional component (as opposed to a class), which enables use of React Hooks
-const App = () => {
-
-  // Associate variables with Redux store variables
-  const listOutput = useSelector(state => state.listOutput);
-
-  // Initiate Redux dispatch, in order to pass data back into store
-  const dispatch = useDispatch();
-
-  function changeList(e) {
-    // Pass data into a particular store reducer action
-    dispatch({ type: 'OUTPUT_LIST', payload: e })   
-  }
-
-
+function App({listOutput}) {
+  
+ //var dataListOutput = "ggg";
 
   return (
     <div className="App">
@@ -37,11 +23,11 @@ const App = () => {
           <h2>1</h2>
           <div>
             <div className="title">Paste or type your list here</div>
-            <textarea placeholder="Item 1&#13;&#10;Item 2&#10;Item 3&#10;Item 4&#10;Item 5" wrap="off" onChange={e => changeList(e.target.value)} />
+            <ListInput />
           </div>
-
           <div className="list"><ListOutput List={listOutput} /></div>
         </div>
+
 
         <div id="appStyler">
           <h2>2</h2>
@@ -74,6 +60,11 @@ const App = () => {
       </footer>
     </div>
   );
-};
+}
 
-export default App;
+
+const mapStateToProps = state => {
+  return { listOutput: state.listOutput }
+}
+
+export default connect(mapStateToProps)(App);

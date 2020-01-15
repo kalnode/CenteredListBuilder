@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+  color: white;
+}
+
+#root {
+  height: 100%;
+}
+
+a {
+    color: #61dafb;
+}
+
+body > iframe {
+  visibility: hidden;
+}
