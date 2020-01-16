@@ -5,8 +5,7 @@ const initialState = {
 
 
   // Main app global vars
-  listInput: "Original list",
-  listOutput: "Final list",
+  listOutput: "",
 
   // Items is old, keeping for reference.
   items: [],
@@ -40,18 +39,6 @@ const reducer = (state = initialState, action) => {
         return Object.assign({}, state, {
           posts: state.posts.concat(action.payload)
         })
-      }
-
-  return state
-}
-
-
-const singleStateVariable = "test";
-
-const reducer2 = (state = singleStateVariable, action) => {
-
-      if (action.type === 'MY_ACTION') {
-        state = action.payload
       }
 
   return state
