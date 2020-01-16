@@ -23,25 +23,45 @@ header, #intro {
 
 
 #intro {
-  display: inline-block;
-  margin: 2em auto;
+text-align: center;
 }
 
 #intro .inner {
-  padding: 1em;
-  border: 1px solid white;
-
   position: absolute;
-
 z-index: 2;
-
 left: 50%;
-
 transform: translate(-50%,0);
 }
 
 #intro .controls {
-  margin-bottom: 1em;
+  
+  display: flex;
+  justify-content: center;
+
+align-items: center;
+
+margin-bottom: 0.2em;
+
+flex-wrap: wrap;
+opacity: 0.5;
+padding-top: 1em;
+}
+
+#intro .controls .title {
+  margin: 0.5em;
+  text-transform: uppercase;
+}
+
+#intro .controls button {
+  border: 1px solid #fff;
+  padding: 0.5em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+#intro .controls button.selected {
+  background-color:#15171c;
+color:#fff;
 }
 
 
@@ -72,33 +92,23 @@ transform: translate(-50%,0);
 }
 
 
-#content {
+#about .content {
   max-width: 550px;
   margin: 0 auto;
 }
 
-main > * {
-  display: flex;
-  flex-wrap: wrap;
+#about .content h3 {
+margin-top: 2em;
 }
 
-main > div > * {
-  flex: 1;
-}
 
-main > div >:first-child {
-  flex: 0 0;
-}
 
-main .title {
+
+#tool .list {
   padding: 1em;
 }
 
-main .list {
-  padding: 1em;
-}
-
-main textarea {
+#tool textarea {
   border-radius: 10px;
   border: 0px none;
   width: 100%;
@@ -129,6 +139,8 @@ main textarea {
     word-break: break-word;
 }
 
+
+
 .centered-list ul li::after {
     /* This is our magic trick. HTML browsers will strip a blank space from the ends of inline elements. */
     content: " ";
@@ -138,9 +150,16 @@ main textarea {
     
    /* This is how we actually visually display a divider. Most times you would make use of the 'content' property, however we're already using it for our trick. Instead we use an inline base64-encoded image or SVG. Here I've included a circle shape. On a side note, FYI there's theoretical security risks when using inline SVG's and/or base64 attachments; Google it. */
    
-/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwAAADsABataJCQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMkMEa+wAAAAnSURBVBhXY/Dz89MA4sNA/B9Ka4AEYQIwfBgkiCwAxjhVopnppwEApxQqhnyQ+VkAAAAASUVORK5CYII=) center center no-repeat;*/
-background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOJJREFUeNrsl8ENgzAMReNM0BEYgUxAR8gIWaUjdJNuAEwQRugG7Qbuj+RDW6kVESTOgSd9RUgQ2zEYm8xKmLnH4qEBOv+4bYJm6EZEi9kDGA5Q5HzSM2GL4Q4aeTtpjy7XuIcevB9pL59z5KUIayIvzcdJ0HvOsUToZMryhBy+kvt39CPXY6yZ97/vA4kD6eh7U5cFaXAkFS4aHZyV8qqFt1LbtRhSCljRAXM4cDig7oCVNkqLyUoPp8WsXorVf0ZWLq4K0V+aaEjaacm0mtK22vImBpMmRrOawylpj+cvAQYAmufq56g5I/AAAAAASUVORK5CYII=) center center no-repeat;
+/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOJJREFUeNrsl8ENgzAMReNM0BEYgUxAR8gIWaUjdJNuAEwQRugG7Qbuj+RDW6kVESTOgSd9RUgQ2zEYm8xKmLnH4qEBOv+4bYJm6EZEi9kDGA5Q5HzSM2GL4Q4aeTtpjy7XuIcevB9pL59z5KUIayIvzcdJ0HvOsUToZMryhBy+kvt39CPXY6yZ97/vA4kD6eh7U5cFaXAkFS4aHZyV8qqFt1LbtRhSCljRAXM4cDig7oCVNkqLyUoPp8WsXorVf0ZWLq4K0V+aaEjaacm0mtK22vImBpMmRrOawylpj+cvAQYAmufq56g5I/AAAAAASUVORK5CYII=) center center no-repeat;*/
+
+background: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' class='svg-seperator' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'%3E%3Ccircle fill='red' cx='16' cy='16' r='16'/%3E%3C/svg%3E") center center no-repeat;
 background-size: 5px;
+
+
+}
+
+.svg-seperator {
+  fill: red;
 }
 
 .centered-list ul li span {
@@ -205,6 +224,9 @@ background-size: 5px;
 .tab-list {
   border-bottom: 1px solid #ccc;
   padding-left: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 .tab-list-item {
@@ -212,12 +234,18 @@ background-size: 5px;
   list-style: none;
   margin-bottom: -1px;
   padding: 0.5rem 0.75rem;
+  cursor: pointer;
 }
 
 .tab-list-active {
-  background-color: white;
   border: solid #ccc;
   border-width: 1px 1px 0 1px;
+  background-color: #15171c;
+}
+
+.tab-content {
+  background-color: #15171c;
+  padding: 1em;
 }
 
 
