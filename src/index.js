@@ -22,4 +22,4 @@ ReactDOM.render(
 
 // Enable service worker: register().
 // Disable service worker: unregister().
-serviceWorker.register();
+serviceWorker.unregister();
