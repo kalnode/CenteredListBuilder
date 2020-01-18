@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <>Copyright 2020 Kal Erikson</>
+    <div id="footer">Copyright &copy; {(new Date().getFullYear())} Kal Erikson</div>
   );
 }
 

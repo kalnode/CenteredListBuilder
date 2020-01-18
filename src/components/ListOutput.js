@@ -11,7 +11,7 @@ export default function ListOutput(props) {
   .split('\n')
   .filter(line => line.trim() !== '')
    // Getting object as string literal (via backticks), and including \n and \t for nice formatting
-  .map(line => `\t<li>${line}</li>\n`).join('') + '</ul>';
+  .map(line => `\t<li><span>${line}</span></li>\n`).join('') + '</ul>';
 
   // For outputting regular styled list
   var RenderedList = props.List
@@ -19,14 +19,16 @@ export default function ListOutput(props) {
   .filter(n => n)
   .map((name, index) => (
     <li key={index}>
-      {name}
+      <span>
+        {name}
+      </span>
     </li>
   ));
 
     // Check if the instance is for "code" view (raw html in browser)
     if (props.Code) {
         return (
-          <><pre><code>{RenderedListRAWHTML}</code></pre></>        
+          <><pre>{RenderedListRAWHTML}</pre></>        
         );
     } else {
       return (

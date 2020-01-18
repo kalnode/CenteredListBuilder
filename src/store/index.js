@@ -4,13 +4,17 @@ import { createStore } from 'redux'
 const initialState = {
 
 
-  // Main app global vars
+
+  // Store pre-loaded list
+  listPlaceholder: "Item 1\nItem 2\nItem 3\nItem 4\nItem 5\netc...",
+
+  // Store user-generated list
   listOutput: "",
 
-  // Items is old, keeping for reference.
-  items: [],
 
-  // Presuming the mini-app may have a modal.
+  // Unused, keeping for reference
+  items: [],
+  
   settingsModal: {
     open: false
   }
@@ -37,7 +41,7 @@ const reducer = (state = initialState, action) => {
 
       if (action.type === 'ADD_ITEM') {
         return Object.assign({}, state, {
-          posts: state.posts.concat(action.payload)
+          posts: state.items.concat(action.payload)
         })
       }
 

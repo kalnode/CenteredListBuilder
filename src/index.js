@@ -13,8 +13,8 @@ window.store = store;
 // App is wrapped in Redux Provider, to allow for global store
 ReactDOM.render(
     <Provider store={store}>
-          <Router>
-        <App />
+        <Router>
+            <App />
         </Router>
     </Provider>,
     document.getElementById('root')
