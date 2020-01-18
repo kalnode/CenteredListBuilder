@@ -5,8 +5,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
-import routeAbout from './views/About';
-import routeTool from './views/Tool';
+import routeAbout from './views/about';
+import routeTool from './views/tool';
 
 
 // App is structred as a functional component (as opposed to a class), which enables use of React Hooks
