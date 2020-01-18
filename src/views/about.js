@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 function About() {
   return (
-    <div id="about" class="inner">
+    <div id="about" className="inner">
             
             <section id="intro">
             
