@@ -32,6 +32,7 @@ export default function ListOutput(props) {
 
       RenderedListRAWCode += `\n\n<!-- CSS code -->\n\n<style>
 .centered-list {
+  /* useful to center the entire list in very narrow container widths */
   display: flex;
   justify-content: center;
 }
@@ -43,11 +44,11 @@ export default function ListOutput(props) {
 }
 
 .centered-list ul li {
-  /* This is a key property, as it will distribute items horizontally and maintain the ::after pseudo-element in the middle of the list. */
+  /* This is important as we get our centering of list items, and at the same time browsers will trim the white-space from the end of the line (see below) */
   display: inline;
 }      
 .centered-list ul li span {
-  /* This is so band names with multiple words don't wrap to a new line. */
+  /* OPTIONAL: This is items with multiple words don't wrap to a new line. */
   white-space: nowrap;
 }
 
@@ -55,8 +56,10 @@ export default function ListOutput(props) {
   /* This is our magic trick. HTML browsers will strip a blank space from the ends of inline elements. */
   content: " ";
 
-  /* This is just to add some breathing space. Note: Using 'padding' would cause problems if our list gets super-narrow. */
-  letter-spacing: 1em;   
+  /* This is how we control spacing between items. It only applies to visible characters (ie the middle bullets). Using 'padding' or 'margin' would cause problems as they would still get applied to the last item in a line. */
+  letter-spacing: 1em;
+
+  /* This is how we actually render a visual bullet, in lieu of using content " ". Here, I'm using an inline base64 SVG which contains a text element. You can control color and other properties within. An image can be used here too, inline base64 or external. */
 `;
         
 RenderedListRAWCode += "background:" + listStyles[listStyle].svg;
@@ -80,28 +83,36 @@ RenderedListRAWCode += `}</style>`;
 
 .centered-list ul {
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
+
+  /* This negative margin is important, it's what hides the bullets on the left-side of the list */
   margin-left: -0.2em;  
   padding: 0;
   list-style-type: circle;
 }
   
 .centered-list li {
+
+  /* Flex-grow: 1 is our main trick... it stretches list items to full width, so we end up with a vertical row of bullets on the left-side. */
   flex-grow: 1;
   flex-basis: auto;
   margin: .25em 0;
   padding: 0 1em;
   position: relative;
 }
-  
+
+
 .centered-list ul li span {
   text-align: center;
   white-space: nowrap;  
+  
+  /* The following are important for spacing items. */
   left: -0.2em;  
   position: relative;
   display: block;
 } 
-            
+
+/* This is where we control bullet style. */
 .centered-list ul { `;
 RenderedListRAWCode += 'list-style-type: "' + listStyles[listStyle].bullet + '"';
   

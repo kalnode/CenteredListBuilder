@@ -4,32 +4,26 @@ import ListOutput from '../components/ListOutput';
 import ReadMore from '../components/ReadMore';
 import ContainerControl from '../components/ContainerControl';
 import { useDispatch, useSelector } from "react-redux";
-
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-//import 'react-tabs/style/react-tabs.css';
+
 
  const Tool = () => {
 
+    // Associate variables with Redux store variables
+    const listOutput = useSelector(state => state.listOutput);
+    const listPlaceholder = useSelector(state => state.listPlaceholder);
+    const listTechnique = useSelector(state => state.listTechnique);
 
- // Associate variables with Redux store variables
- const listOutput = useSelector(state => state.listOutput);
- const listPlaceholder = useSelector(state => state.listPlaceholder);
-const listTechnique = useSelector(state => state.listTechnique);
+    // Initiate Redux dispatch, in order to pass data back into store
+    const dispatch = useDispatch();
 
- // Initiate Redux dispatch, in order to pass data back into store
- const dispatch = useDispatch();
+    function changeList(e) {
+      dispatch({ type: 'OUTPUT_LIST', payload: e })   
+    }
 
- function changeList(e) {
-   // Pass data into a particular store reducer action
-   dispatch({ type: 'OUTPUT_LIST', payload: e })   
- }
-
-
- function setTechnique(e) {
-  // Pass data into a particular store reducer action
-  dispatch({ type: 'SET_TECHNIQUE', payload: e })   
-  //console.log("Technique: " + e)
-}
+    function setTechnique(e) {
+      dispatch({ type: 'SET_TECHNIQUE', payload: e })   
+    }
 
   return (
     <div id="tool" className="inner">
@@ -41,7 +35,7 @@ const listTechnique = useSelector(state => state.listTechnique);
         <textarea placeholder={listOutput ? listOutput : listPlaceholder} wrap="off" onChange={e => changeList(e.target.value)} />
       </div>
 
-  {/*<div className="list"><ListOutput List={listOutput} /></div>*/}
+      {/*<div className="list"><ListOutput List={listOutput} /></div>*/}
     </section>
 
 
@@ -57,10 +51,6 @@ const listTechnique = useSelector(state => state.listTechnique);
       </div>
     </section>
 
-
-
-
-
     <section id="appResult">
       <h2 className="number">3</h2>
       <div>
@@ -68,7 +58,6 @@ const listTechnique = useSelector(state => state.listTechnique);
           <div className="instruction">Choose technique:</div>
         </div>
         <div className="inner">
-
 
         <Tabs defaultIndex={listTechnique} onSelect={index => setTechnique(index)} className="selectTechnique">
           <TabList>
