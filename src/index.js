@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 
 // Redux store
 import { Provider } from 'react-redux';
-import store from './index';
+import store from './store';
 window.store = store;
 
 // App is wrapped in Redux Provider, to allow for global store
