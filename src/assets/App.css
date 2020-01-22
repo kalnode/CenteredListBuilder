@@ -1,16 +1,39 @@
+/* ===================================== */
+/* GENERAL */
+/* ===================================== */
+
 .App {
   height: 100%;
   margin: 0 auto;
   padding: 1em;
   max-width: 1200px;
   display: flex;
+  flex-direction: column;
+}
 
-flex-direction: column;
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttonCTA {
+  text-decoration: none;
+  padding: 1em 2em;
+  margin: 1em;
+  background-color: #61dafb;
+  color: #15171c;
+  display: inline-block;
+  border-radius: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 
+/* ===================================== */
 /* HEADER */
-/* ====================== */
+/* ===================================== */
 
 header {
   text-transform: uppercase;
@@ -33,54 +56,42 @@ header {
 
 #navigation li {
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #navigation a {
   text-decoration: none;
-
-  padding: 1em;
-  
-  background-color:
-  #363c46;
-  
-  border-width: 1px 1px 1px 1px;
-  
-  border-color:
-  #363c46;
-  
+  padding: 1em;  
+  background-color: #363c46;  
+  border-width: 1px 1px 1px 1px;  
+  border-color: #363c46;  
   border-style: solid;
 }
 
 #navigation a.is-active {
-background-color: #15171c;
-border-style: solid;
-border-color: #cccccc;
-position: relative;
-z-index: 1;
+  background-color: #15171c;
+  border-style: solid;
+  border-color: #cccccc;
+  position: relative;
+  z-index: 1;
 }
 
 #navigation a.is-active::after {
-  background-color:
-  #15171c;
-  
-  height: 100%;
-  
-  width: 100%;
-  
-  position: absolute;
-  
-  top: 2px;
-  
-  z-index: -1;
-  
-  content: " ";
-  
+  background-color: #15171c;  
+  height: 100%;  
+  width: 100%;  
+  position: absolute;  
+  top: 2px;  
+  z-index: -1;  
+  content: " ";  
   left: 0;
 }
 
 
+/* ===================================== */
+/* MAIN */
+/* ===================================== */
 
 main {
   background-color: #15171c;
@@ -93,105 +104,26 @@ main > .inner {
   margin: 0 auto;
 }
 
-.cta {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-}
-
-.buttonCTA {
-  text-decoration: none;
-
-padding: 1em 2em;
-
-margin: 1em;
-
-background-color:
-#61dafb;
-
-color:
-#15171c;
-
-display: inline-block;
-
-border-radius: 40px;
-
-text-transform: uppercase;
-
-font-weight: bold;
-}
 
 
 
-
-/* INTRO */
-/* ============= */
+/* ===================================== */
+/* ABOUT PAGE */
+/* ===================================== */
 
 #intro {
   text-align: center;
 }
 
-#intro .inner {
-  position: absolute;
-z-index: 2;
-left: 50%;
-transform: translate(-50%,0);
-}
-
-#intro .controls {
-  
-  display: flex;
-  justify-content: center;
-
-align-items: center;
-
-margin-bottom: 0.2em;
-
-flex-wrap: wrap;
-opacity: 0.5;
-padding-top: 1em;
-}
-
-#intro .controls .title {
-  margin: 0.5em;
-  text-transform: uppercase;
-}
-
-#intro .controls button {
-  border: 1px solid #fff;
-  padding: 0.5em;
-  margin: 0.5em;
-  cursor: pointer;
-}
-
-#intro .controls button.selected {
-  background-color:#15171c;
-color:#fff;
-}
-
 
 #intro-list {
-  margin: 0 auto;  
   font-size: 1.5em;  
   font-weight: bold;  
   text-transform: uppercase;  
   background-color: #525b6c;
   padding: 1em;  
-  box-sizing: border-box;
-  text-align: center;
-
-  width: 550px;
-  /*
-  animation: animResize 2s infinite;
-  animation-direction: alternate;
-  backface-visibility: hidden;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);*/
 }
+
 
 #intro h3 {
   margin-top: 14em;
@@ -208,33 +140,34 @@ margin-top: 2em;
 }
 
 
-
+/* ===================================== */
+/* TOOL */
+/* ===================================== */
 
 #tool > section {
   display: flex;
-
-padding: 2em 0;
-
-flex-wrap: wrap;
+  padding: 2em 1em;
+  flex-wrap: wrap;  
+  justify-content: center;
 }
 
 #tool section > div {
-  flex: 1 1 80%;
-  margin: 0 auto;
+  flex: 1 1 300px;
+margin: 0 auto;
 }
 
 #tool .number {
   font-size: 4em;
-text-align: center;
-flex: 1 0 200px;
-margin: 0;
+  text-align: center;  
+  margin: 0;  
+  width: 100%;  
+  max-width: 150px;  
+  padding: 1rem;
 }
 
 #tool .instruction {
   padding: 2em 0;
 }
-
-
 
 #tool .list {
   padding: 1em;
@@ -248,150 +181,241 @@ margin: 0;
   box-sizing: border-box;
   padding: 1em;
   font-family: sans-serif;
+  font-size: 1em;
   max-width: 500px;
 }
-
 
 #appStyler {
   margin: 2em 0;
-background-color:#21252d;
-}
-
-#appStyler > div {
-  padding: 1em;
-  box-sizing: border-box;
-}
-
-#appResult .title {
-  background-color: #601b00;
-    padding: 0.5em;
-    display: inline-block;
-    margin: 1em;
+  background-color:#21252d;
 }
 
 #appResult .inner > div {
+  margin-bottom: 3em;
+}
+
+#appResult .title {
+  background-color:  #61dafb;
+    padding: 1em;  
+  display: inline-block;  
+  margin-bottom: 1em;  
+  color: #15171c;
+}
+
+#appResult .title h1,
+#appResult .title h2,
+#appResult .title h3,
+#appResult .title h4,
+#appResult .title h5 {
+  margin: 0;
+}
+
+#appResult pre {
+ margin: 0;
+}
+#appResult code {
+  word-wrap: anywhere;
+overflow-wrap: anywhere;
+white-space: break-spaces;
+
+}
+
+#appResult .centered-list0{
+  line-height: 2;
+}
+
+
+
+
+
+
+
+
+/* ===================================== */
+/* CONTAINER WIDTH CONTROLLER */
+/* ===================================== */
+.containerControl .width0 {
+  width: 200px;
+}
+
+.containerControl .width1 {
+  width: 300px;
+}
+.containerControl .width2 {
+  width: 500px;
+}
+.containerControl .width3 {
+  width: 800px;
+}
+
+.containerControl .width4 {
+  animation: animResize 4s infinite;
+  animation-direction: alternate;
+  backface-visibility: hidden;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.containerControl {
+  position: relative;
+padding-bottom: 8em;
+}
+
+.containerControl .inner {
+  position: absolute;
+  z-index: 2;  
+  left: 50%;  
+  transform: translate(-50%,0);
+}
+
+
+.containerControl .title {
+  margin: 0.5em;
+  text-transform: uppercase;
+}
+
+.containerControl button {
+  border: 1px solid #fff;
+  padding: 0.5em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.containerControl button.selected {
+  background-color:#15171c;
+color:#fff;
+}
+
+
+.containerControl .react-tabs ul {
   display: flex;
-flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.containerControl .controls {
+  margin-bottom: 0.4em;
+  opacity: 0.5;
+  padding-top: 2em;
+}
+
+/* ===================================== */
+/* REACT TABS */
+/* ===================================== */
+
+.react-tabs__tab-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+/*   margin-bottom: 3em; */
+
+.selectTechnique > .react-tabs__tab-list {
+  border-bottom: 1px solid;
+}
+
+.react-tabs__tab-list h1,
+.react-tabs__tab-list h2, 
+.react-tabs__tab-list h3, 
+.react-tabs__tab-list h4, 
+.react-tabs__tab-list h5 {
+ margin: 0;
+ padding: 0;
+}
+
+.react-tabs__tab {
+  padding: 1em;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.containerControl .react-tabs__tab {
+  padding: 0.5em 1em;
+
+}
+
+.react-tabs__tab:hover {
+  background-color: #2d333e;
+}
+
+.react-tabs__tab--selected {
+  background-color: #ffffff !important;
+  color: #000000;
+}
+
+#appStyler > div > .react-tabs__tab {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  margin: 0;
+}
+
+.styler .react-tabs__tab {
+display: flex;
+justify-content: center;
 align-items: center;
-flex: 1 1 300px;
+flex-direction: column;
+line-height: 1;
 }
 
-
-
-
-
-
-.centered-list  ul {
-    padding: 0;
-    margin: 0;
-    text-align: center;
+.styler .react-tabs__tab h5 {
+  font-size: 0.9em;
 }
 
-.centered-list ul li {
+.readMore {
+display: flex;
 
-    /* This is a key property, as it will distribute items horizontally and maintain the ::after pseudo-element in the middle of the list. */
-    display: inline;
-    word-break: break-word;
-}
+flex-direction: column;
 
+justify-content: center;
 
-
-.centered-list ul li::after {
-    /* This is our magic trick. HTML browsers will strip a blank space from the ends of inline elements. */
-    content: " ";
-
-    /* This is just to add some breathing space. Note: Using 'padding' would cause problems if our list gets super-narrow. */
-    letter-spacing: 1em;
-    
-   /* This is how we actually visually display a divider. Most times you would make use of the 'content' property, however we're already using it for our trick. Instead we use an inline base64-encoded image or SVG. Here I've included a circle shape. On a side note, FYI there's theoretical security risks when using inline SVG's and/or base64 attachments; Google it. */
-   
-/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOJJREFUeNrsl8ENgzAMReNM0BEYgUxAR8gIWaUjdJNuAEwQRugG7Qbuj+RDW6kVESTOgSd9RUgQ2zEYm8xKmLnH4qEBOv+4bYJm6EZEi9kDGA5Q5HzSM2GL4Q4aeTtpjy7XuIcevB9pL59z5KUIayIvzcdJ0HvOsUToZMryhBy+kvt39CPXY6yZ97/vA4kD6eh7U5cFaXAkFS4aHZyV8qqFt1LbtRhSCljRAXM4cDig7oCVNkqLyUoPp8WsXorVf0ZWLq4K0V+aaEjaacm0mtK22vImBpMmRrOawylpj+cvAQYAmufq56g5I/AAAAAASUVORK5CYII=) center center no-repeat;*/
-
-background: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' class='svg-seperator' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'%3E%3Ccircle fill='red' cx='16' cy='16' r='16'/%3E%3C/svg%3E") center center no-repeat;
-background-size: 5px;
-
+align-items: center;
 
 }
 
-.svg-seperator {
-  fill: red;
-}
-
-.centered-list ul li span {
-    /* This is so band names with multiple words don't wrap to a new line. */
-    white-space: nowrap;
-}
-
-
-#intro-list2 {
-  max-width: 500px;
-  display: none;
-}
-
-.centered-list2 {
-  position: relative;
-  margin: 1em;
+.readMore.readClosed > div {
+  max-height: 120px;
   overflow: hidden;
-}
-.centered-list2 ul {
-  display: flex;
-  flex-wrap: wrap;  
-  justify-content: space-between;  
-  margin-left: -1px;  
-  padding: 0;  
-  list-style: none;
-}
-
-.centered-list2 li {
-  flex-grow: 1;
-  flex-basis: auto;  
-  margin: .25em 0;  
-  padding: 0 1em;  
-  text-align: center;  
-  /* border-left: 1px solid #ccc; */
   position: relative;
-  padding-right: 0.5em;
-}
-
-.centered-list2 ul li::before {
-  content: "•";
-  position: absolute;  
-  left: -0.2em;
 }
 
 
+.readMore.readClosed > div::after {
+  width: 100%;
 
-@keyframes animResize {
-  0% {
-    width: 550px;
-  }
-  50% {
-    width: 350px;
-  }
-  100% {
-    width: 250px;
-  }
+height: 100%;
+
+background: linear-gradient(180deg, rgba(21, 23, 28,0) 00%, rgb(21, 23, 28) 80%);
+
+position: absolute;
+
+content: " ";
+
+top: 0;
+}
+
+.readMore button {
+  padding: 0.5em 1em;
+
+border: 0;
+
+background-color:
+#a8a8a8;
+cursor:pointer;
 }
 
 
 
-.tab-list {
-  border-bottom: 1px solid #ccc;
-  padding-left: 0;
-}
-
-.tab-list-item {
-  display: inline-block;
-  list-style: none;
-  margin-bottom: -1px;
-  padding: 0.5rem 0.75rem;
-}
-
-.tab-list-active {
-  border: solid #ccc;
-  border-width: 1px 1px 0 1px;
-}
-
+/* ===================================== */
+/* FOOTER */
+/* ===================================== */
 
 #footer {
   display: flex;
@@ -400,3 +424,165 @@ background-size: 5px;
   background-color: #000000;
   padding: 1em;
 }
+
+
+/* ===================================== */
+/* ANIMATIONS */
+/* ===================================== */
+
+@keyframes animResize {
+  0% {
+    width: 800px;
+  }
+  33% {
+    width: 500px;
+  }
+  66% {
+    width: 300px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+/* ===================================== */
+/* MEDIA QUERIES */
+/* ===================================== */
+@media (max-width: 640px) {
+
+  }
+
+
+
+
+  /* ===================================== */
+/* LIST CODE */
+/* ===================================== */
+
+
+/* TECHNIQUE A */
+/* -------------------------*/
+
+
+.centered-list0 {
+  display: flex;
+  justify-content: center;
+}
+
+.centered-list0 ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.centered-list0 ul li {
+  /* This is a key property, as it will distribute items horizontally and maintain the ::after pseudo-element in the middle of the list. */
+  display: inline;
+}
+
+.centered-list0 ul li::after {
+  /* This is our magic trick. HTML browsers will strip a blank space from the ends of inline elements. */
+  content: " ";
+
+  /* This is just to add some breathing space. Note: Using 'padding' would cause problems if our list gets super-narrow. */
+  letter-spacing: 1em;
+  
+  /* This is how we actually visually display a divider. Most times you would make use of the 'content' property, however we're already using it for our trick. Instead we use an inline base64-encoded image or SVG. Here I've included a circle shape. On a side note, FYI there's theoretical security risks when using inline SVG's and/or base64 attachments; Google it. */
+  background: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' class='svg-seperator' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'%3E%3Ccircle fill='red' cx='16' cy='16' r='16'/%3E%3C/svg%3E") center/5px no-repeat;
+
+}
+
+.centered-list0 ul li span {
+  /* This is so band names with multiple words don't wrap to a new line. */
+  white-space: nowrap;
+}
+
+.centered-list0.bulletStyle0 ul li::after {
+  /*background: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' class='svg-seperator' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'%3E%3Ccircle fill='purple' cx='16' cy='16' r='16'/%3E%3C/svg%3E") center/5px no-repeat; */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' class='text' fill='red' style='font-size:1em;font-family:sans-serif;'%3E•%3C/text%3E%3C/svg%3E");
+}
+
+.centered-list0.bulletStyle1 ul li::after {
+/*  background: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' class='svg-seperator' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'%3E%3Ccircle fill='blue' cx='16' cy='16' r='16'/%3E%3C/svg%3E") center/5px no-repeat;*/
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' class='text' fill='red' style='font-size:1em;font-family:sans-serif;'%3E-%3C/text%3E%3C/svg%3E");
+}
+
+.centered-list0.bulletStyle2 ul li::after {
+  /* background: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' class='svg-seperator' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'%3E%3Ccircle fill='yellow' cx='16' cy='16' r='16'/%3E%3C/svg%3E") center/5px no-repeat; */
+   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' class='text' fill='red' style='font-size:1em;font-family:sans-serif;'%3E|%3C/text%3E%3C/svg%3E");
+}
+
+.centered-list0.bulletStyle3 ul li::after {
+  /* background: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' class='svg-seperator' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'%3E%3Ccircle fill='orange' cx='16' cy='16' r='16'/%3E%3C/svg%3E") center/5px no-repeat; */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' class='text' fill='red' style='font-size:1em;font-family:sans-serif;'%3E■%3C/text%3E%3C/svg%3E");
+}
+
+.centered-list0.bulletStyle4 ul li::after {
+  /* background: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' class='svg-seperator' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'%3E%3Ccircle fill='green' cx='16' cy='16' r='16'/%3E%3C/svg%3E") center/5px no-repeat; */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' class='text' fill='red' style='font-size:1em;font-family:sans-serif;'%3E/%3C/text%3E%3C/svg%3E");
+}
+
+.centered-list0.bulletStyle5 ul li::after {
+  /* background: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' class='svg-seperator' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' xml:space='preserve'%3E%3Ccircle fill='green' cx='16' cy='16' r='16'/%3E%3C/svg%3E") center/5px no-repeat; */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' class='text' fill='red' style='font-size:1em;font-family:sans-serif;'%3E\\%3C/text%3E%3C/svg%3E");
+}
+
+
+/* TECHNIQUE B */
+/* -------------------------*/
+
+.centered-list1 {
+position: relative;
+overflow: hidden;
+}
+.centered-list1 ul {
+display: flex;
+flex-wrap: wrap;  
+margin-left: -0.2em;  
+padding: 0;
+list-style-type: circle;
+}
+
+.centered-list1 li {
+flex-grow: 1;
+flex-basis: auto;
+margin: .25em 0;
+padding: 0 1em;
+position: relative;
+}
+
+.centered-list1 ul li span {
+  text-align: center;
+  white-space: nowrap;  
+  left: -0.2em;  
+  position: relative;
+  display: block;
+}
+
+.centered-list1.bulletStyle0 ul {
+  list-style-type: "•";
+}
+
+.centered-list1.bulletStyle1 ul {
+  list-style-type: "-";
+}
+
+.centered-list1.bulletStyle2 ul {
+  list-style-type: "|";
+}
+
+.centered-list1.bulletStyle3 ul {
+  list-style-type: "■";
+}
+
+.centered-list1.bulletStyle4 ul {
+  list-style-type: "/";
+}
+
+.centered-list1.bulletStyle5 ul {
+  list-style-type: "\\";
+}
+
+
+/* TECHNIQUE C */
+/* -------------------------*/

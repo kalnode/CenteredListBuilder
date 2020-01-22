@@ -1,7 +1,10 @@
-import React from 'react';
+import React from "react";
 import { NavLink } from 'react-router-dom';
+//import Button from '../components/Button';
+import ContainerControl from '../components/ContainerControl';
 
 function About() {
+
   return (
     <div id="about" className="inner">
             
@@ -9,17 +12,8 @@ function About() {
             
               <h2>A helper to achieve a list style like below:</h2>
 
-              <div className="controls">
-                  <div className="title">Container Width: </div>
-                  <div>
-                    <button id="intro_button1">300px</button>
-                    <button id="intro_button2" className="selected">500px</button>
-                    <button id="intro_button3">800px</button>
-                  </div>
-                </div>
-              <div className="inner">                
-
-                <div id="intro-list" className="centered-list">
+              <ContainerControl>
+                <div id="intro-list" className="centered-list centered-list0">
                 <ul>
                       <li><span>Elephant</span></li>
                       <li><span>Dog</span></li>
@@ -34,8 +28,8 @@ function About() {
                       <li><span>Wolf</span></li>
                       <li><span>Dolphin</span></li>
                   </ul>
-                </div>
-              </div>
+                </div>             
+              </ContainerControl>
 
               <h3 style={{paddingBottom: "2em"}}>This list requires some code tricks!</h3>
 
@@ -50,8 +44,8 @@ function About() {
                 <li>Evenly (or nicely) spaced items</li>
                 <li>Responsive and dynamic</li>
                 <li>Uses plain HTML structure</li>
-                <li>... and has no bullet appearing on the start or end of a line.</li>
                 <li>Ideally CSS-only</li>
+                <li>... and <u><i>has no bullet appearing on the start or end of a line.</i></u></li>
               </ul>
 
               <h3>Inspiration: MUSIC FESTIVAL POSTERS!</h3>
@@ -64,7 +58,7 @@ function About() {
               <h3>How</h3>
               <p>There's a few solutions involving CSS-only and/or JS!</p>
 
-              <div class="cta">
+              <div className="cta">
                 <h3>Make a centered list...</h3>
                 <NavLink className="buttonCTA" activeClassName='is-active' to='/tool'>Start here</NavLink>
               </div>
