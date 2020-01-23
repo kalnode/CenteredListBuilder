@@ -30,14 +30,21 @@
   font-weight: bold;
 }
 
+header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 
 /* ===================================== */
 /* HEADER */
 /* ===================================== */
 
 header {
-  text-transform: uppercase;
-  text-align: center;
+  display: flex;
+align-items: flex-end;
+flex-wrap: wrap;
+justify-content: center;
 }
 
 .logo {
@@ -52,6 +59,9 @@ header {
   padding: 0;
   margin: 0;
   border-bottom: 1px solid #cccccc;
+  margin: 0 1em;
+
+margin-bottom: -1px;
 }
 
 #navigation li {
@@ -97,6 +107,7 @@ main {
   background-color: #15171c;
   padding: 1em;
   padding-bottom: 3em;
+  border-top: 1px solid white;
 }
 
 main > .inner {
@@ -122,11 +133,6 @@ main > .inner {
   text-transform: uppercase;  
   background-color: #525b6c;
   padding: 1em;  
-}
-
-
-#intro h3 {
-  margin-top: 14em;
 }
 
 

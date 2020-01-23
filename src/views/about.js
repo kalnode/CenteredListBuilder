@@ -10,7 +10,7 @@ function About() {
             
             <section id="intro">
             
-              <h2>A helper to achieve a list style like below:</h2>
+              <h2 style={{marginTop: "2em"}}>A helper to achieve a list style like below:</h2>
 
               <ContainerControl>
                 <div id="intro-list" className="centered-list centered-list0">
@@ -31,13 +31,15 @@ function About() {
                 </div>             
               </ContainerControl>
 
-              <h3 style={{paddingBottom: "2em"}}>This list requires some code tricks!</h3>
+              <div className="cta" style={{marginTop: "8em"}}>
+                <NavLink className="buttonCTA" activeClassName='is-active' to='/tool'>Make a List!</NavLink>
+              </div>
 
             </section>
 
 
             <section className="content">
-              <h3>List Description</h3>
+              <h3>Why is this list special?</h3>
               <p>This is an uncommon list style, and typically not a feature in text editors (web or otherwise).</p>
               <ul>
                 <li>Centered and bulleted</li>

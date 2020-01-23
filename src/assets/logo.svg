@@ -1,21 +1,21 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px"
 	 height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-<g id="Layer_2">
+<g id="Layer_2" fill="#ffffff">
 	
-		<rect x="405" y="227.6" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="51" height="56.9"/>
+		<rect x="405" y="227.6" stroke="#ffffff" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="51" height="56.9"/>
 	
-		<rect x="56" y="227.6" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="250" height="56.9"/>
+		<rect x="56" y="227.6" stroke="#ffffff" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="250" height="56.9"/>
 	
-		<rect x="335.3" y="341.3" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="80.2" height="56.9"/>
+		<rect x="335.3" y="341.3" stroke="#ffffff" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="80.2" height="56.9"/>
 	
-		<rect x="92.3" y="341.3" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="144.3" height="56.9"/>
-	<g>
+		<rect x="92.3" y="341.3" stroke="#ffffff" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="144.3" height="56.9"/>
+
 		
-			<rect x="96" y="113.8" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="81" height="56.9"/>
+			<rect x="96" y="113.8" stroke="#ffffff" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="81" height="56.9"/>
 		
-			<rect x="276" y="113.8" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="140" height="56.9"/>
+			<rect x="276" y="113.8" stroke="#ffffff" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="140" height="56.9"/>
 		<circle cx="227" cy="142.2" r="25"/>
-	</g>
+
 	<circle cx="356" cy="256" r="25"/>
 	<circle cx="286.3" cy="369.8" r="25"/>
 </g>
