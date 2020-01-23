@@ -2,21 +2,21 @@
 	 height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
 <g id="Layer_2">
 	
-		<rect x="96.5" y="56.9" fill="#6D6E71" stroke="#6D6E71" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="319" height="56.9"/>
+		<rect x="405" y="227.6" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="51" height="56.9"/>
 	
-		<rect x="56" y="170.7" fill="#6D6E71" stroke="#6D6E71" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="81" height="56.9"/>
+		<rect x="56" y="227.6" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="250" height="56.9"/>
 	
-		<rect x="375" y="284.4" fill="#6D6E71" stroke="#6D6E71" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="81" height="56.9"/>
+		<rect x="335.3" y="341.3" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="80.2" height="56.9"/>
 	
-		<rect x="256" y="170.7" fill="#6D6E71" stroke="#6D6E71" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="200" height="56.9"/>
-	
-		<rect x="56" y="284.4" fill="#6D6E71" stroke="#6D6E71" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="200" height="56.9"/>
-	
-		<rect x="324.3" y="398.2" fill="#6D6E71" stroke="#6D6E71" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="91.2" height="56.9"/>
-	
-		<rect x="92.3" y="398.2" fill="#6D6E71" stroke="#6D6E71" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="113.3" height="56.9"/>
-	<circle fill="#939598" cx="197" cy="199.1" r="25"/>
-	<circle fill="#939598" cx="317" cy="312.9" r="25"/>
-	<circle fill="#939598" cx="264.3" cy="426.7" r="25"/>
+		<rect x="92.3" y="341.3" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="144.3" height="56.9"/>
+	<g>
+		
+			<rect x="96" y="113.8" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="81" height="56.9"/>
+		
+			<rect x="276" y="113.8" stroke="#000000" stroke-width="19" stroke-linejoin="round" stroke-miterlimit="10" width="140" height="56.9"/>
+		<circle cx="227" cy="142.2" r="25"/>
+	</g>
+	<circle cx="356" cy="256" r="25"/>
+	<circle cx="286.3" cy="369.8" r="25"/>
 </g>
 </svg>
