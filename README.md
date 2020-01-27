@@ -1,7 +1,8 @@
-Centered List Builder v1.0
+**Centered List Builder v1.0**
 
-DEMO: https://centerlist.herokuapp.com
+**DEMO:** https://centerlist.herokuapp.com
 
+**DESCRIPTION:**
 A helper for building and styling centered HTML lists!
 
 This tool generates a non-standard list style, perhaps useful in creative typography, described as such:
@@ -15,6 +16,8 @@ This tool generates a non-standard list style, perhaps useful in creative typogr
 
 To make such a list requires some CSS and/or JS tricks!
 
-Inspiration: Musical festival posters! They traditionally have a dense band list (aka "the lineup"), where list items have seperators (like dots) and seperator never occurring on the edges of the list. Such lists you only ever see in fixed print designs, and rarely do you see it in a responsive form, such as on a website.
+**INSPIRATION: Musical festival posters!**
+They traditionally have a dense band list (aka "the lineup"), where list items have seperators (like dots) and seperator never occurring on the edges of the list. Such lists you only ever see in fixed print designs, and rarely do you see it in a responsive form, such as on a website.
 
-Tech details: Made with React, using router, redux and react-tabs, deployed on Heroku.
+**TECH DETAILS:**
+Made with React, using router, redux and react-tabs, deployed on Heroku.
