@@ -1,5 +1,7 @@
 Centered List Builder v1.0
 
+DEMO: https://centerlist.herokuapp.com
+
 A helper for building and styling centered HTML lists!
 
 This tool generates a non-standard list style, perhaps useful in creative typography, described as such:
