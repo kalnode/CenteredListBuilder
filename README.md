@@ -6,12 +6,12 @@ A helper for building and styling centered HTML lists!
 
 This tool generates a non-standard list style, perhaps useful in creative typography, described as such:
 
-• Centered and bulleted
-• Evenly (or nicely) spaced items
-• Responsive and dynamic
-• Uses plain HTML structure
-• Ideally CSS-only
-• ... and has no bullet appearing on the start or end of a line.
+* Centered and bulleted
+* Evenly (or nicely) spaced items
+* Responsive and dynamic
+* Uses plain HTML structure
+* Ideally CSS-only
+* ... and has no bullet appearing on the start or end of a line.
 
 To make such a list requires some CSS and/or JS tricks!
 
