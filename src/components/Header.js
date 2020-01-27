@@ -5,7 +5,7 @@ import Logo from '../components/Logo';
 function Header(props) {
   return (
     <>
-    <NavLink exact={true} activeClassName='is-active' to='/'>
+    <NavLink activeClassName='is-active' to='/'>
     <div style={{margin: "1em",textAlign: "center"}}>
       <Logo />
       <div>
@@ -16,7 +16,7 @@ function Header(props) {
     </NavLink>
 
     <ul id="navigation">
-      <li><NavLink activeClassName='is-active' to='/about'>About</NavLink></li>
+      <li><NavLink exact={true} activeClassName='is-active' to='/about'>About</NavLink></li>
       <li><NavLink activeClassName='is-active' to='/tool'>Make a List</NavLink></li>
     </ul>
     </>

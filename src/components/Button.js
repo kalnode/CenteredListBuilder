@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 function ToggleBtn(props) {
-//    const activeCls = (props.isActive) ? ' is-active' : '';
+    // const activeCls = (props.isActive) ? ' is-active' : '';
     const [activeCls, setActive] = useState(null);
 
     function runFuncs() {

@@ -12,33 +12,20 @@ export default function ListStyler(props) {
   function setStyle(e) {
     // Pass data into a particular store reducer action
     dispatch({ type: 'SET_STYLE', payload: e})
-    
-    console.log("List style set to: " + e);
   }
-
-  
 
   return (
     <Tabs  defaultIndex={selectedListStyle}
-    onSelect={
-    index => {
-      console.log("clicked item: " + index)
-      setStyle(index)
-    }
-    }>
-    <TabList>
+      onSelect={index => { console.log("clicked item: " + index); setStyle(index) }}>
+      <TabList>
+        {listStyles.map( (item, index) => (
+        <Tab key={index}><h2>{item.bullet}</h2><h5>{item.title}</h5></Tab>
+        ))}
+      </TabList>
 
-    {listStyles.map( (item, index) => (
-       <Tab key={index}><h2>{item.bullet}</h2><h5>{item.title}</h5></Tab>
-      ))}
-    </TabList>
-
-    {listStyles.map( (item, index) => (
-       <TabPanel key={index}></TabPanel>
-      ))}
-
-
-  </Tabs>
-
+      {listStyles.map( (item, index) => (
+        <TabPanel key={index}></TabPanel>
+        ))}
+    </Tabs>
   );
 }

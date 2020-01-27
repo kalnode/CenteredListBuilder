@@ -126,7 +126,6 @@ main > .inner {
   text-align: center;
 }
 
-
 #intro-list {
   font-size: 1.5em;  
   font-weight: bold;  
@@ -134,7 +133,6 @@ main > .inner {
   background-color: #525b6c;
   padding: 1em;  
 }
-
 
 #about .content {
   max-width: 550px;
@@ -592,3 +590,6 @@ position: relative;
 
 /* TECHNIQUE C */
 /* -------------------------*/
+
+/* STYLING FOR JAVASCRIPT TECHNIQUE */
+/* COMING SOON */

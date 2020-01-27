@@ -1,16 +1,13 @@
 import { createStore } from 'redux'
 
-// All global variables defined in one object
+// Global store object
 const initialState = {
-
-
 
   // Store pre-loaded list
   listPlaceholder: "Some Item\nAnother Item\nItem\nA Longer Item This Is\nItem Item\netc...",
 
   // Store user-generated list
   listOutput: "",
-
 
   listStyles: [
     { id: "1", title: "Dot", bullet: "•", techniques: [1, 2, 3], svg: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' class='text' fill='red' style='font-size:1em;font-family:sans-serif;'%3E•%3C/text%3E%3C/svg%3E");`},
@@ -21,7 +18,7 @@ const initialState = {
     { id: "6", title: "Back Slash", bullet: "\\", techniques: [1, 2, 3], svg: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' class='text' fill='red' style='font-size:1em;font-family:sans-serif;'%3E\\%3C/text%3E%3C/svg%3E");`},
   ],
 
-  // Selected technique
+  // Selected technique/style
   listTechnique: 0,
   listStyle: 0,
 
@@ -30,21 +27,18 @@ const initialState = {
     open: false
   }
 
-
 }
 
 // Defining store actions
 const reducer = (state = initialState, action) => {
 
       if (action.type === 'INPUT_LIST') {
-        //console.log("applying payload to listInput: " + action.payload)
         return Object.assign({}, state, {
           listInput: action.payload
         })
       }
 
       if (action.type === 'OUTPUT_LIST') {
-        //console.log("applying payload to listOutput: " + action.payload)
         return Object.assign({}, state, {
             listOutput: action.payload
           })

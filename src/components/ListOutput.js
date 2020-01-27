@@ -9,28 +9,28 @@ export default function ListOutput(props) {
 
   var RenderedListRAWCode = "";
   
-   // For outputting regular styled list
-   var RenderedList = props.List
-   .split('\n')
-   .filter(n => n)
-   .map((name, index) => (
-     <li key={index}>
-       <span>
-         {name}
-       </span>
-     </li>
-   ));
+  // For outputting regular styled list
+  var RenderedList = props.List
+  .split('\n')
+  .filter(n => n)
+  .map((name, index) => (
+    <li key={index}>
+      <span>
+        {name}
+      </span>
+    </li>
+  ));
 
 
-    if (listTechnique === 0 ) {
-        // For outputting visible HTML code in the browser (inside <pre><code>) 
-      RenderedListRAWCode = '<!-- HTML code -->\n\n<div class="centered-list">\n\t<ul>\n' + props.List
-      .split('\n')
-      .filter(line => line.trim() !== '')
-      // Getting object as string literal (via backticks), and including \n and \t for nice formatting
-      .map(line => `\t\t<li><span>${line}</span></li>\n`).join('') + '\t</ul>\n</div>';
+  if (listTechnique === 0 ) {
+      // For outputting visible HTML code in the browser (inside <pre><code>) 
+    RenderedListRAWCode = '<!-- HTML code -->\n\n<div class="centered-list">\n\t<ul>\n' + props.List
+    .split('\n')
+    .filter(line => line.trim() !== '')
+    // Getting object as string literal (via backticks), and including \n and \t for nice formatting
+    .map(line => `\t\t<li><span>${line}</span></li>\n`).join('') + '\t</ul>\n</div>';
 
-      RenderedListRAWCode += `\n\n<!-- CSS code -->\n\n<style>
+    RenderedListRAWCode += `\n\n<!-- CSS code -->\n\n<style>
 .centered-list {
   /* useful to center the entire list in very narrow container widths */
   display: flex;
@@ -66,16 +66,16 @@ RenderedListRAWCode += "background:" + listStyles[listStyle].svg;
 
 RenderedListRAWCode += `}</style>`;  
      
-    } else if (listTechnique === 1 ) {
+  } else if (listTechnique === 1 ) {
 
-        // For outputting visible HTML code in the browser (inside <pre><code>) 
-        RenderedListRAWCode = '<!-- HTML code -->\n\n<div class="centered-list">\n\t<ul>\n' + props.List
-        .split('\n')
-        .filter(line => line.trim() !== '')
-        // Getting object as string literal (via backticks), and including \n and \t for nice formatting
-        .map(line => `\t\t<li><span>${line}</span></li>\n`).join('') + '\t</ul>\n</div>';
+      // For outputting visible HTML code in the browser (inside <pre><code>) 
+      RenderedListRAWCode = '<!-- HTML code -->\n\n<div class="centered-list">\n\t<ul>\n' + props.List
+      .split('\n')
+      .filter(line => line.trim() !== '')
+      // Getting object as string literal (via backticks), and including \n and \t for nice formatting
+      .map(line => `\t\t<li><span>${line}</span></li>\n`).join('') + '\t</ul>\n</div>';
 
-      RenderedListRAWCode += `\n\n<!-- CSS code -->\n\n<style>
+    RenderedListRAWCode += `\n\n<!-- CSS code -->\n\n<style>
 .centered-list {
   position: relative;
   overflow: hidden;
@@ -92,7 +92,6 @@ RenderedListRAWCode += `}</style>`;
 }
   
 .centered-list li {
-
   /* Flex-grow: 1 is our main trick... it stretches list items to full width, so we end up with a vertical row of bullets on the left-side. */
   flex-grow: 1;
   flex-basis: auto;
@@ -100,7 +99,6 @@ RenderedListRAWCode += `}</style>`;
   padding: 0 1em;
   position: relative;
 }
-
 
 .centered-list ul li span {
   text-align: center;
@@ -117,29 +115,27 @@ RenderedListRAWCode += `}</style>`;
 RenderedListRAWCode += 'list-style-type: "' + listStyles[listStyle].bullet + '"';
   
 RenderedListRAWCode += `}</style>`;  
-
-
       
-    } else if (listTechnique === 2 ) {
+  } else if (listTechnique === 2 ) {
 
-       RenderedList = "(Javascript method coming soon)"
-       RenderedListRAWCode = "<!-- (Javascript method coming soon) -->";
+    RenderedList = "(Javascript method coming soon)"
+    RenderedListRAWCode = "<!-- (Javascript method coming soon) -->";
 
 
 
-    } else {
-      RenderedList = "(No list found)"
-      RenderedListRAWCode = "(No code to display)";
-    }
+  } else {
+    RenderedList = "(No list found)"
+    RenderedListRAWCode = "(No code to display)";
+  }
 
-    // Check if the instance is for "code" view (raw html in browser)
-    if (props.Code) {
-        return (
-          <pre><code>{RenderedListRAWCode}</code></pre>    
-        );
-    } else {
+  // Check if the instance is for "code" view (raw html in browser)
+  if (props.Code) {
       return (
-        <div id="preview-list" className={`centered-list` + listTechnique + ` bulletStyle` + listStyle}><ul>{RenderedList}</ul></div>
+        <pre><code>{RenderedListRAWCode}</code></pre>    
       );
-    }
+  } else {
+    return (
+      <div id="preview-list" className={`centered-list` + listTechnique + ` bulletStyle` + listStyle}><ul>{RenderedList}</ul></div>
+    );
+  }
 }
