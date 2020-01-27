@@ -30,11 +30,6 @@
   font-weight: bold;
 }
 
-header a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
 
 /* ===================================== */
 /* HEADER */
@@ -42,9 +37,21 @@ header a {
 
 header {
   display: flex;
-align-items: flex-end;
-flex-wrap: wrap;
-justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#headerGithub {
+  position: absolute;
+    right: 1em;
+    top: 1em;
 }
 
 .logo {
