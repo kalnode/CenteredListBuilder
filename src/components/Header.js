@@ -22,7 +22,7 @@ function Header(props) {
     </ul>
 
     <div id="headerGithub">
-      <a href="https://github.com/TheMangoTrain/centeredliststyler"><img style={{height: "2em"}} src={GithubIcon} className="logo" alt="logo" /> GitHub</a>
+      <a href="https://github.com/TheMangoTrain/CenteredListBuilder"><img style={{height: "2em"}} src={GithubIcon} className="logo" alt="logo" /> GitHub</a>
     </div>
     </>
   );
