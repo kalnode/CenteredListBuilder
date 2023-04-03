@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.18fb393f.chunk.css",
-    "main.js": "/static/js/main.e85e7ed1.chunk.js",
-    "main.js.map": "/static/js/main.e85e7ed1.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.3c9ee553.js",
-    "runtime-main.js.map": "/static/js/runtime-main.3c9ee553.js.map",
-    "static/js/2.1d713802.chunk.js": "/static/js/2.1d713802.chunk.js",
-    "static/js/2.1d713802.chunk.js.map": "/static/js/2.1d713802.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6a7f2162a303cfec4b4d3233c882b868.js": "/precache-manifest.6a7f2162a303cfec4b4d3233c882b868.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.18fb393f.chunk.css.map": "/static/css/main.18fb393f.chunk.css.map",
-    "static/media/github.svg": "/static/media/github.edd19191.svg",
-    "static/media/logo.svg": "/static/media/logo.12fd5c12.svg"
+    "main.css": "/CenteredListBuilder/static/css/main.18fb393f.chunk.css",
+    "main.js": "/CenteredListBuilder/static/js/main.fd34679d.chunk.js",
+    "main.js.map": "/CenteredListBuilder/static/js/main.fd34679d.chunk.js.map",
+    "runtime-main.js": "/CenteredListBuilder/static/js/runtime-main.f7e5599c.js",
+    "runtime-main.js.map": "/CenteredListBuilder/static/js/runtime-main.f7e5599c.js.map",
+    "static/js/2.1d713802.chunk.js": "/CenteredListBuilder/static/js/2.1d713802.chunk.js",
+    "static/js/2.1d713802.chunk.js.map": "/CenteredListBuilder/static/js/2.1d713802.chunk.js.map",
+    "index.html": "/CenteredListBuilder/index.html",
+    "precache-manifest.e8807a9ac8939e09e7db5a7643b75739.js": "/CenteredListBuilder/precache-manifest.e8807a9ac8939e09e7db5a7643b75739.js",
+    "service-worker.js": "/CenteredListBuilder/service-worker.js",
+    "static/css/main.18fb393f.chunk.css.map": "/CenteredListBuilder/static/css/main.18fb393f.chunk.css.map",
+    "static/media/github.svg": "/CenteredListBuilder/static/media/github.edd19191.svg",
+    "static/media/logo.svg": "/CenteredListBuilder/static/media/logo.12fd5c12.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3c9ee553.js",
+    "static/js/runtime-main.f7e5599c.js",
     "static/js/2.1d713802.chunk.js",
     "static/css/main.18fb393f.chunk.css",
-    "static/js/main.e85e7ed1.chunk.js"
+    "static/js/main.fd34679d.chunk.js"
   ]
 }
