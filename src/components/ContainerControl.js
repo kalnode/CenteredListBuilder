@@ -1,17 +1,16 @@
-import React, {useState} from "react";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import React, {useState} from "react"
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 
 export default function ContainerControl(props) {
 
-    const [containerWidth, setWidth] = useState(2);
-    var [containerParent, setContainer1] = useState(null);  
-    var [containerInner, setContainer2] = useState(null); 
+    const [containerWidth, setWidth] = useState(2)
+    var [containerParent, setContainer1] = useState(null)
+    var [containerInner, setContainer2] = useState(null)
 
     function setHeight() {
-     containerParent.height = containerInner.clientHeight + 200 + "px";
-
+        containerParent.height = containerInner.clientHeight + 200 + "px"
     }
- 
+
     return (
         <div className="containerControl" onClick={() => setHeight()} ref={ (divElement) => { setContainer1(divElement) } }>
             <div className="controls">
@@ -34,9 +33,9 @@ export default function ContainerControl(props) {
             </div>
             <div className={`inner width` + containerWidth} ref={ (divElement) => { setContainer2(divElement) } }>   
                 {props.children}
-            </div>                
+            </div>
         </div>
-    );
+    )
 }
 
 
