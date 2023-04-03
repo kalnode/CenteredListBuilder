@@ -28,44 +28,46 @@ export default function ListOutput(props) {
         .split('\n')
         .filter(line => line.trim() !== '')
         // Getting object as string literal (via backticks), and including \n and \t for nice formatting
-        .map(line => `\t\t<li><span>${line}</span></li>\n`).join('') + '\t</ul>\n</div>';
+        .map(line => `\t\t<li><span>${line}</span></li>\n`).join('') + '\t</ul>\n</div>'
 
         RenderedListRAWCode += `\n\n<!-- CSS code -->\n\n<style>
-            .centered-list {
-            /* useful to center the entire list in very narrow container widths */
-            display: flex;
-            justify-content: center;
-            }
+.centered-list {
+    /* useful to center the entire list in very narrow container widths */
+    display: flex;
+    justify-content: center;
+}
 
-            .centered-list ul {
-            padding: 0;
-            margin: 0;
-            text-align: center;
-            }
+.centered-list ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
 
-            .centered-list ul li {
-            /* This is important as we get our centering of list items, and at the same time browsers will trim the white-space from the end of the line (see below) */
-            display: inline;
-            }      
-            .centered-list ul li span {
-            /* OPTIONAL: This is items with multiple words don't wrap to a new line. */
-            white-space: nowrap;
-            }
+.centered-list ul li {
+    /* This is important as we get our centering of list items, and at the same time browsers will trim the white-space from the end of the line (see below) */
+    display: inline;
+}      
+.centered-list ul li span {
+    /* OPTIONAL: This is items with multiple words don't wrap to a new line. */
+    white-space: nowrap;
+}
 
-            .centered-list ul li::after {
-            /* This is our magic trick. HTML browsers will strip a blank space from the ends of inline elements. */
-            content: " ";
+.centered-list ul li::after {
+    /* This is our magic trick. HTML browsers will strip a blank space from the ends of inline elements. */
+    content: " ";
 
-            /* This is how we control spacing between items. It only applies to visible characters (ie the middle bullets). Using 'padding' or 'margin' would cause problems as they would still get applied to the last item in a line. */
-            letter-spacing: 1em;
+    /* This is how we control spacing between items. It only applies to visible characters (ie the middle bullets). Using 'padding' or 'margin' would cause problems as they would still get applied to the last item in a line. */
+    letter-spacing: 1em;
 
-            /* This is how we actually render a visual bullet, in lieu of using content " ". Here, I'm using an inline base64 SVG which contains a text element. You can control color and other properties within. An image can be used here too, inline base64 or external. */
-        `
+    /* This is how we actually render a visual bullet, in lieu of using content " ". Here, I'm using an inline base64 SVG which contains a text element. You can control color and other properties within. An image can be used here too, inline base64 or external. */
+`
+        RenderedListRAWCode += "    background:" + listStyles[listStyle].svg
+        RenderedListRAWCode +=
+`
+}
+</style>
+`
 
-        RenderedListRAWCode += "background:" + listStyles[listStyle].svg
-
-        RenderedListRAWCode += `}</style>`
-        
     } else if (listTechnique === 1 ) {
 
         // For outputting visible HTML code in the browser (inside <pre><code>) 
@@ -76,47 +78,50 @@ export default function ListOutput(props) {
         .map(line => `\t\t<li><span>${line}</span></li>\n`).join('') + '\t</ul>\n</div>'
 
         RenderedListRAWCode += `\n\n<!-- CSS code -->\n\n<style>
-            .centered-list {
-            position: relative;
-            overflow: hidden;
-            }
+.centered-list {
+    position: relative;
+    overflow: hidden;
+}
 
-            .centered-list ul {
-            display: flex;
-            flex-wrap: wrap;
+.centered-list ul {
+    display: flex;
+    flex-wrap: wrap;
 
-            /* This negative margin is important, it's what hides the bullets on the left-side of the list */
-            margin-left: -0.2em;  
-            padding: 0;
-            list-style-type: circle;
-            }
-            
-            .centered-list li {
-            /* Flex-grow: 1 is our main trick... it stretches list items to full width, so we end up with a vertical row of bullets on the left-side. */
-            flex-grow: 1;
-            flex-basis: auto;
-            margin: .25em 0;
-            padding: 0 1em;
-            position: relative;
-            }
+    /* This negative margin is important, it's what hides the bullets on the left-side of the list */
+    margin-left: -0.2em;  
+    padding: 0;
+    list-style-type: circle;
+}
 
-            .centered-list ul li span {
-            text-align: center;
-            white-space: nowrap;  
-            
-            /* The following are important for spacing items. */
-            left: -0.2em;  
-            position: relative;
-            display: block;
-            } 
+.centered-list li {
+    /* Flex-grow: 1 is our main trick... it stretches list items to full width, so we end up with a vertical row of bullets on the left-side. */
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: .25em 0;
+    padding: 0 1em;
+    position: relative;
+}
 
-            /* This is where we control bullet style. */
-            .centered-list ul {
-        `
-        RenderedListRAWCode += 'list-style-type: "' + listStyles[listStyle].bullet + '"'
-        
-        RenderedListRAWCode += `}</style>`
-      
+.centered-list ul li span {
+    text-align: center;
+    white-space: nowrap;
+
+    /* The following are important for spacing items. */
+    left: -0.2em;  
+    position: relative;
+    display: block;
+} 
+
+/* This is where we control bullet style. */
+.centered-list ul {
+`
+    RenderedListRAWCode += '    list-style-type: "' + listStyles[listStyle].bullet + '"'
+    RenderedListRAWCode +=
+`
+}
+</style>
+`
+
     } else if (listTechnique === 2 ) {
 
         RenderedList = "(Javascript method coming soon)"
