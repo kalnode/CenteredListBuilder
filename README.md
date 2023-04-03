@@ -1,7 +1,7 @@
 **Centered List Builder v1.0**
 
 
-**DEMO:** https://centerlist.herokuapp.com
+**DEMO:** https://themangotrain.github.io/CenteredListBuilder
 
 
 **DESCRIPTION:**
