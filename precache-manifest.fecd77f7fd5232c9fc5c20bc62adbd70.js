@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d10fc04585b9ab93c9354e43b766addf",
+    "revision": "46b772afb92ea8c30369d2e4542764c9",
     "url": "/CenteredListBuilder/index.html"
   },
   {
-    "revision": "e6f578bda1725225aa1e",
+    "revision": "ccf3567777c3c7ed74f6",
     "url": "/CenteredListBuilder/static/css/main.0b082e2b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CenteredListBuilder/static/js/2.18e18414.chunk.js"
   },
   {
-    "revision": "e6f578bda1725225aa1e",
-    "url": "/CenteredListBuilder/static/js/main.e34fda30.chunk.js"
+    "revision": "ccf3567777c3c7ed74f6",
+    "url": "/CenteredListBuilder/static/js/main.e53e4753.chunk.js"
   },
   {
     "revision": "a05be03614577687fe29",

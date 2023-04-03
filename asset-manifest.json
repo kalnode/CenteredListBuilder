@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CenteredListBuilder/static/css/main.0b082e2b.chunk.css",
-    "main.js": "/CenteredListBuilder/static/js/main.e34fda30.chunk.js",
-    "main.js.map": "/CenteredListBuilder/static/js/main.e34fda30.chunk.js.map",
+    "main.js": "/CenteredListBuilder/static/js/main.e53e4753.chunk.js",
+    "main.js.map": "/CenteredListBuilder/static/js/main.e53e4753.chunk.js.map",
     "runtime-main.js": "/CenteredListBuilder/static/js/runtime-main.ab5c944d.js",
     "runtime-main.js.map": "/CenteredListBuilder/static/js/runtime-main.ab5c944d.js.map",
     "static/js/2.18e18414.chunk.js": "/CenteredListBuilder/static/js/2.18e18414.chunk.js",
     "static/js/2.18e18414.chunk.js.map": "/CenteredListBuilder/static/js/2.18e18414.chunk.js.map",
     "index.html": "/CenteredListBuilder/index.html",
-    "precache-manifest.8e2b7ccf7829ae8d1c58ab93a00ff0d1.js": "/CenteredListBuilder/precache-manifest.8e2b7ccf7829ae8d1c58ab93a00ff0d1.js",
+    "precache-manifest.fecd77f7fd5232c9fc5c20bc62adbd70.js": "/CenteredListBuilder/precache-manifest.fecd77f7fd5232c9fc5c20bc62adbd70.js",
     "service-worker.js": "/CenteredListBuilder/service-worker.js",
     "static/css/main.0b082e2b.chunk.css.map": "/CenteredListBuilder/static/css/main.0b082e2b.chunk.css.map",
     "static/media/github.svg": "/CenteredListBuilder/static/media/github.edd19191.svg",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.ab5c944d.js",
     "static/js/2.18e18414.chunk.js",
     "static/css/main.0b082e2b.chunk.css",
-    "static/js/main.e34fda30.chunk.js"
+    "static/js/main.e53e4753.chunk.js"
   ]
 }
