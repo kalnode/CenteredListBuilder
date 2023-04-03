@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/CenteredListBuilder/precache-manifest.e8807a9ac8939e09e7db5a7643b75739.js"
+  "/CenteredListBuilder/precache-manifest.54240a118e343e074d54c3e15276f937.js"
 );
 
 self.addEventListener('message', (event) => {

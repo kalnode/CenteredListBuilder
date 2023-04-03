@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cf50980fd1d10eeb8a1409f2a61b6e4d",
+    "revision": "5bb3f656309e627613a706e642cd6998",
     "url": "/CenteredListBuilder/index.html"
   },
   {
