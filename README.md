@@ -1,7 +1,7 @@
 **Centered List Builder v1.0**
 
 
-**DEMO:** https://themangotrain.github.io/CenteredListBuilder
+**DEMO:** https://kalnode.github.io/CenteredListBuilder
 
 
 **DESCRIPTION:**
